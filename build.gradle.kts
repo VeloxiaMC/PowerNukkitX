@@ -14,7 +14,6 @@ import org.gradle.testing.jacoco.tasks.JacocoReport
 
 plugins {
     `java-library`
-    `maven-publish`
     java
     idea
     jacoco
