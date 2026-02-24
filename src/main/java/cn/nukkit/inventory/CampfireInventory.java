@@ -1,8 +1,8 @@
 package cn.nukkit.inventory;
 
 
-import cn.nukkit.Player;
-import cn.nukkit.blockentity.BlockEntityCampfire;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntityCampfire;
 import cn.nukkit.item.Item;
 
 

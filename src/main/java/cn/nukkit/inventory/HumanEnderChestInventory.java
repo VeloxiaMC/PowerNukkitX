@@ -1,8 +1,8 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.Player;
-import cn.nukkit.blockentity.BlockEntityEnderChest;
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntityEnderChest;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 import cn.nukkit.entity.IHuman;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.Sound;

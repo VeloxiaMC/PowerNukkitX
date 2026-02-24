@@ -1,7 +1,7 @@
 package cn.nukkit.form;
 
 import cn.nukkit.GameMockExtension;
-import cn.nukkit.PlayerHandle;
+import cn.nukkit.player.PlayerHandle;
 import cn.nukkit.TestEventHandler;
 import cn.nukkit.TestPlayer;
 import cn.nukkit.TestPluginManager;

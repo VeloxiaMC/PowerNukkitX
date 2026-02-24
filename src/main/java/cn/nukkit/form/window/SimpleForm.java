@@ -1,6 +1,6 @@
 package cn.nukkit.form.window;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.form.element.ElementDivider;
 import cn.nukkit.form.element.ElementHeader;
 import cn.nukkit.form.element.ElementLabel;

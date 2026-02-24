@@ -6,8 +6,7 @@ import cn.nukkit.level.generator.object.ObjectLegacyObjectWrapper;
 import cn.nukkit.level.generator.object.ObjectSavannaTree;
 import cn.nukkit.level.generator.object.legacytree.LegacyOakTree;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.utils.random.NukkitRandom;
+import cn.nukkit.nbt.tags.BiomeTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 
 public class SavannaTreeFeature extends ObjectGeneratorFeature {

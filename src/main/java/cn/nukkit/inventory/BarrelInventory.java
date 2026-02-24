@@ -1,10 +1,10 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockBarrel;
-import cn.nukkit.blockentity.BlockEntityBarrel;
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.block.blockentity.BlockEntityBarrel;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.Sound;
 import cn.nukkit.network.protocol.types.itemstack.ContainerSlotType;

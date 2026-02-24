@@ -1,6 +1,6 @@
 package cn.nukkit.network.process.handler;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.entity.data.property.EntityProperty;
 import cn.nukkit.nbt.tag.CompoundTag;
 import cn.nukkit.network.connection.BedrockSession;
@@ -146,7 +146,6 @@ public class SpawnResponseHandler extends BedrockSessionPacketHandler {
         // Write custom block data
         startPk.blockProperties.addAll(Registries.BLOCK.getCustomBlockDefinitionList());
         startPk.playerPropertyData = EntityProperty.getPlayerPropertyCache();
-        startPk.setExperiments(server.getExperiments());
         player.dataPacketImmediately(startPk);
     }
 

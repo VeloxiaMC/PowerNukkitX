@@ -2,10 +2,9 @@ package cn.nukkit.level.entity.spawners;
 
 import cn.nukkit.block.BlockID;
 import cn.nukkit.entity.Entity;
-import cn.nukkit.entity.mob.EntityMob;
 import cn.nukkit.entity.passive.EntityAnimal;
 import cn.nukkit.level.entity.condition.*;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 
 public class SpawnRuleGoat extends SpawnRule {
 

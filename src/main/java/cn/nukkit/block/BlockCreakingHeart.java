@@ -1,10 +1,10 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.CommonBlockProperties;
 import cn.nukkit.block.property.enums.CreakingHeartState;
-import cn.nukkit.blockentity.BlockEntityCreakingHeart;
-import cn.nukkit.blockentity.BlockEntityID;
+import cn.nukkit.block.blockentity.BlockEntityCreakingHeart;
+import cn.nukkit.block.blockentity.BlockEntityID;
 import cn.nukkit.entity.mob.EntityCreaking;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemTool;

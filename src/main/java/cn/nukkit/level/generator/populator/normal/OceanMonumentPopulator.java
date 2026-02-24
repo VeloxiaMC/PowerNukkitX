@@ -11,7 +11,7 @@ import cn.nukkit.level.generator.object.structures.utils.StructureStart;
 import cn.nukkit.level.generator.populator.Populator;
 import cn.nukkit.math.BlockFace;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 import cn.nukkit.utils.random.NukkitRandom;
 import cn.nukkit.utils.random.RandomSourceProvider;
 import com.google.common.collect.Maps;

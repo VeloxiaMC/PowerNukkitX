@@ -1,6 +1,6 @@
 package cn.nukkit.inventory.request;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.entity.passive.EntityVillagerV2;
 import cn.nukkit.event.inventory.CraftItemEvent;
@@ -23,8 +23,8 @@ import cn.nukkit.network.protocol.types.itemstack.request.action.ItemStackReques
 import cn.nukkit.network.protocol.types.itemstack.request.action.ItemStackRequestActionType;
 import cn.nukkit.recipe.Input;
 import cn.nukkit.recipe.Recipe;
-import cn.nukkit.recipe.SmithingTransformRecipe;
-import cn.nukkit.recipe.SmithingTrimRecipe;
+import cn.nukkit.recipe.type.SmithingTransformRecipe;
+import cn.nukkit.recipe.type.SmithingTrimRecipe;
 import cn.nukkit.recipe.descriptor.ItemDescriptor;
 import cn.nukkit.registry.Registries;
 import cn.nukkit.utils.TradeRecipeBuildUtils;

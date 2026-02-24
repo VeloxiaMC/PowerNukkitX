@@ -1,7 +1,7 @@
 package cn.nukkit.network.process.handler;
 
-import cn.nukkit.Player;
-import cn.nukkit.PlayerHandle;
+import cn.nukkit.player.Player;
+import cn.nukkit.player.PlayerHandle;
 import cn.nukkit.network.connection.BedrockSession;
 import cn.nukkit.network.protocol.DisconnectPacket;
 import cn.nukkit.network.protocol.PacketHandler;

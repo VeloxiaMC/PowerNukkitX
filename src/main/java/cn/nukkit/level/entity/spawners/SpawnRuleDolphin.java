@@ -7,7 +7,7 @@ import cn.nukkit.level.entity.condition.ConditionHeightFilter;
 import cn.nukkit.level.entity.condition.ConditionInAir;
 import cn.nukkit.level.entity.condition.ConditionNot;
 import cn.nukkit.level.entity.condition.ConditionSpawnUnderwater;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 
 public class SpawnRuleDolphin extends SpawnRule {
 

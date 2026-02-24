@@ -2,7 +2,6 @@ package cn.nukkit.block;
 
 import cn.nukkit.block.property.CommonBlockProperties;
 import cn.nukkit.block.property.type.BlockPropertyType;
-import cn.nukkit.education.Education;
 import cn.nukkit.registry.BlockRegistry;
 import cn.nukkit.registry.Registries;
 import com.google.gson.JsonArray;

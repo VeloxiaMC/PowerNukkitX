@@ -2,8 +2,8 @@ package cn.nukkit.level.generator.object.structures;
 
 import cn.nukkit.block.*;
 import cn.nukkit.block.property.enums.MinecraftCardinalDirection;
-import cn.nukkit.blockentity.BlockEntityChest;
-import cn.nukkit.blockentity.BlockEntityMobSpawner;
+import cn.nukkit.block.blockentity.BlockEntityChest;
+import cn.nukkit.block.blockentity.BlockEntityMobSpawner;
 import cn.nukkit.entity.EntityID;
 import cn.nukkit.item.Item;
 import cn.nukkit.level.format.IChunk;

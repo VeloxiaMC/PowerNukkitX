@@ -10,7 +10,7 @@ import cn.nukkit.level.entity.condition.ConditionNot;
 import cn.nukkit.level.entity.condition.ConditionSpawnOnBlockFilter;
 import cn.nukkit.level.entity.condition.ConditionSpawnOnGround;
 import cn.nukkit.level.entity.condition.ConditionSpawnUnderground;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 
 public class SpawnRuleHoglin extends SpawnRule {
 

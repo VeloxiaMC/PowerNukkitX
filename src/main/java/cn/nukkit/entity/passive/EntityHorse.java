@@ -1,10 +1,9 @@
 package cn.nukkit.entity.passive;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockDirt;
-import cn.nukkit.block.BlockLiquid;
 import cn.nukkit.block.BlockTurtleEgg;
 import cn.nukkit.entity.Attribute;
 import cn.nukkit.entity.Entity;
@@ -43,10 +42,7 @@ import cn.nukkit.item.Item;
 import cn.nukkit.item.enchantment.Enchantment;
 import cn.nukkit.level.GameRule;
 import cn.nukkit.level.Location;
-import cn.nukkit.level.ParticleEffect;
 import cn.nukkit.level.format.IChunk;
-import cn.nukkit.math.AxisAlignedBB;
-import cn.nukkit.math.SimpleAxisAlignedBB;
 import cn.nukkit.math.Vector2;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.math.Vector3f;

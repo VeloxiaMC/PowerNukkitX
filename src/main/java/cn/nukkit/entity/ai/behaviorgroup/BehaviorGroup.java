@@ -134,6 +134,7 @@ public class BehaviorGroup implements IBehaviorGroup {
      */
     @Override
     public void tickRunningBehaviors(EntityIntelligent entity) {
+        if (!isMobAIEnabled()) return;
         var iterator = runningBehaviors.iterator();
         while (iterator.hasNext()) {
             IBehavior behavior = iterator.next();
@@ -147,6 +148,7 @@ public class BehaviorGroup implements IBehaviorGroup {
 
     @Override
     public void tickRunningCoreBehaviors(EntityIntelligent entity) {
+        if (!isMobAIEnabled()) return;
         var iterator = runningCoreBehaviors.iterator();
         while (iterator.hasNext()) {
             IBehavior coreBehavior = iterator.next();
@@ -166,8 +168,14 @@ public class BehaviorGroup implements IBehaviorGroup {
         }
     }
 
+    public boolean isMobAIEnabled() {
+        return Server.getInstance().getSettings().gameplaySettings().mobAi();
+    }
+
+
     @Override
     public void collectSensorData(EntityIntelligent entity) {
+        if (!isMobAIEnabled()) return;
         sensorPeriodTimer.forEach((sensor, tick) -> {
             //刷新gt数
             sensorPeriodTimer.put(sensor, ++tick);
@@ -180,6 +188,7 @@ public class BehaviorGroup implements IBehaviorGroup {
 
     @Override
     public void evaluateCoreBehaviors(EntityIntelligent entity) {
+        if (!isMobAIEnabled()) return;
         coreBehaviorPeriodTimer.forEach((coreBehavior, tick) -> {
             //若已经在运行了，就不需要评估了
             if (runningCoreBehaviors.contains(coreBehavior)) return;
@@ -204,6 +213,7 @@ public class BehaviorGroup implements IBehaviorGroup {
      */
     @Override
     public void evaluateBehaviors(EntityIntelligent entity) {
+        if (!isMobAIEnabled()) return;
         //存储评估成功的行为（未过滤优先级）
         var evalSucceed = new HashSet<IBehavior>(behaviors.size());
         int highestPriority = Integer.MIN_VALUE;
@@ -255,6 +265,7 @@ public class BehaviorGroup implements IBehaviorGroup {
 
     @Override
     public void applyController(EntityIntelligent entity) {
+        if (!isMobAIEnabled()) return;
         for (IController controller : controllers) {
             controller.control(entity);
         }
@@ -262,6 +273,7 @@ public class BehaviorGroup implements IBehaviorGroup {
 
     @Override
     public void updateRoute(EntityIntelligent entity) {
+        if (!isMobAIEnabled()) return;
         currentRouteUpdateTick++;
         boolean reachUpdateCycle = currentRouteUpdateTick >= calcActiveDelay(entity, ROUTE_UPDATE_CYCLE + (entity.level.tickRateOptDelay << 1));
         if (reachUpdateCycle) currentRouteUpdateTick = 0;

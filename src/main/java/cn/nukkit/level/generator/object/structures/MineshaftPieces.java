@@ -2,12 +2,11 @@ package cn.nukkit.level.generator.object.structures;
 
 import cn.nukkit.block.*;
 import cn.nukkit.block.property.enums.TorchFacingDirection;
-import cn.nukkit.blockentity.BlockEntityMobSpawner;
+import cn.nukkit.block.blockentity.BlockEntityMobSpawner;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.EntityID;
 import cn.nukkit.entity.item.EntityChestMinecart;
 import cn.nukkit.item.Item;
-import cn.nukkit.level.Position;
 import cn.nukkit.level.format.IChunk;
 import cn.nukkit.level.generator.object.BlockManager;
 import cn.nukkit.level.generator.object.RandomizableContainer;

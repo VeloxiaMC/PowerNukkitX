@@ -8,7 +8,6 @@ import cn.nukkit.network.protocol.ResourcePackClientResponsePacket;
 import cn.nukkit.network.protocol.ResourcePackDataInfoPacket;
 import cn.nukkit.network.protocol.ResourcePackStackPacket;
 import cn.nukkit.network.protocol.ResourcePacksInfoPacket;
-import cn.nukkit.network.protocol.types.ExperimentEntry;
 import cn.nukkit.resourcepacks.ResourcePack;
 import cn.nukkit.utils.version.Version;
 import lombok.extern.slf4j.Slf4j;
@@ -100,9 +99,6 @@ public class ResourcePackHandler extends BedrockSessionPacketHandler {
                 stackPacket.mustAccept = server.getForceResources() && !server.getForceResourcesAllowOwnPacks();
                 stackPacket.resourcePackStack = server.getResourcePackManager().getResourceStack();
 
-                for (ExperimentEntry entry : server.getExperiments()) {
-                    stackPacket.experiments.add(new ResourcePackStackPacket.ExperimentData(entry.name(), entry.enabled()));
-                }
                 session.sendPacket(stackPacket);
             }
             case ResourcePackClientResponsePacket.STATUS_COMPLETED -> {

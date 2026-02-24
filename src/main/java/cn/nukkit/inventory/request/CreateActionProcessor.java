@@ -1,6 +1,6 @@
 package cn.nukkit.inventory.request;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.network.protocol.types.itemstack.request.action.CraftRecipeAction;
 import cn.nukkit.network.protocol.types.itemstack.request.action.CreateAction;
 import cn.nukkit.network.protocol.types.itemstack.request.action.ItemStackRequestAction;

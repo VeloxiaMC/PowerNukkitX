@@ -1,10 +1,9 @@
 package cn.nukkit.entity;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
-import cn.nukkit.registry.BiomeRegistry;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 import lombok.Getter;
 
 import java.util.Arrays;

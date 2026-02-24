@@ -1,11 +1,10 @@
 package cn.nukkit.entity.mob;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockBedrock;
 import cn.nukkit.block.BlockEndGateway;
-import cn.nukkit.block.BlockState;
 import cn.nukkit.block.BlockTorch;
 import cn.nukkit.block.property.enums.TorchFacingDirection;
 import cn.nukkit.entity.Attribute;

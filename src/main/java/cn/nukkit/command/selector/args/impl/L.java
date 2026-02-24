@@ -1,6 +1,6 @@
 package cn.nukkit.command.selector.args.impl;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.exceptions.SelectorSyntaxException;
 import cn.nukkit.command.selector.ParseUtils;
@@ -51,7 +51,7 @@ import java.util.function.Predicate;
  * @see cn.nukkit.command.CommandSender
  * @see cn.nukkit.level.Location
  * @see cn.nukkit.entity.Entity
- * @see cn.nukkit.Player
+ * @see Player
  * @since PowerNukkitX 2.0.0
  */
 public class L extends CachedSimpleSelectorArgument {

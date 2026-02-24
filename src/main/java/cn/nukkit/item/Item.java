@@ -1,6 +1,6 @@
 package cn.nukkit.item;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockAir;
@@ -35,7 +35,7 @@ import cn.nukkit.network.protocol.CompletedUsingItemPacket;
 import cn.nukkit.plugin.PluginManager;
 import cn.nukkit.registry.ItemRegistry;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.ItemTags;
+import cn.nukkit.nbt.tags.ItemTags;
 import cn.nukkit.utils.Binary;
 import cn.nukkit.utils.Identifier;
 import cn.nukkit.utils.JSONUtils;

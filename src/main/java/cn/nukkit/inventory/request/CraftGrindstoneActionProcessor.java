@@ -1,6 +1,6 @@
 package cn.nukkit.inventory.request;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.event.inventory.GrindstoneEvent;
 import cn.nukkit.inventory.GrindstoneInventory;
 import cn.nukkit.inventory.Inventory;

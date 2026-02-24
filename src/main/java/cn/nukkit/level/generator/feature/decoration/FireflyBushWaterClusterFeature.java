@@ -4,7 +4,7 @@ import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockFireflyBush;
 import cn.nukkit.block.BlockReeds;
 import cn.nukkit.block.BlockState;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 
 public class FireflyBushWaterClusterFeature extends GroupedDiscFeature {
 

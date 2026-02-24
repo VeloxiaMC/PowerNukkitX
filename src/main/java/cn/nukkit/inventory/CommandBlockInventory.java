@@ -1,8 +1,8 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.Player;
-import cn.nukkit.blockentity.BlockEntityCommandBlock;
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntityCommandBlock;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 import cn.nukkit.event.inventory.InventoryOpenEvent;
 import cn.nukkit.item.Item;
 import cn.nukkit.math.Vector3;

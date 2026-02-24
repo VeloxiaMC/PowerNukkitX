@@ -1,12 +1,12 @@
 package cn.nukkit.entity.item;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockActivatorRail;
 import cn.nukkit.block.BlockDetectorRail;
 import cn.nukkit.block.BlockGoldenRail;
 import cn.nukkit.block.BlockRail;
-import cn.nukkit.blockentity.BlockEntityHopper;
+import cn.nukkit.block.blockentity.BlockEntityHopper;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.EntityHuman;
 import cn.nukkit.entity.EntityLiving;

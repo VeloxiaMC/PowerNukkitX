@@ -1,6 +1,6 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.blockentity.BlockEntityFurnace;
+import cn.nukkit.block.blockentity.BlockEntityFurnace;
 import cn.nukkit.item.Item;
 
 public abstract class SmeltingInventory extends ContainerInventory {

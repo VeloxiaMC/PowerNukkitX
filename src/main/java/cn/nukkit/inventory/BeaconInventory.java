@@ -1,8 +1,8 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.Player;
-import cn.nukkit.blockentity.BlockEntityBeacon;
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntityBeacon;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 import cn.nukkit.item.Item;
 import cn.nukkit.network.protocol.ContainerOpenPacket;
 import cn.nukkit.network.protocol.types.itemstack.ContainerSlotType;

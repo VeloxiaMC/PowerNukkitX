@@ -1,7 +1,7 @@
 package cn.nukkit.inventory.fake;
 
 import cn.nukkit.block.BlockID;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.inventory.InventoryType;
 
 public enum FakeInventoryType {

@@ -2,6 +2,7 @@ package cn.nukkit.recipe;
 
 import cn.nukkit.item.Item;
 import cn.nukkit.recipe.descriptor.ItemDescriptor;
+import cn.nukkit.recipe.type.RecipeType;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;

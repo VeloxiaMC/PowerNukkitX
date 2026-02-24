@@ -3,10 +3,9 @@ package cn.nukkit.level.entity.spawners;
 import cn.nukkit.block.BlockID;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.passive.EntityAnimal;
-import cn.nukkit.entity.passive.EntityRabbit;
 import cn.nukkit.level.entity.condition.*;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import cn.nukkit.utils.Utils;
 
 public class SpawnRuleRabbit extends MultiSpawnRule {

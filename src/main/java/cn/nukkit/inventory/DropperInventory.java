@@ -1,8 +1,8 @@
 package cn.nukkit.inventory;
 
 
-import cn.nukkit.blockentity.BlockEntityDropper;
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.block.blockentity.BlockEntityDropper;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 
 
 public class DropperInventory extends EjectableInventory {

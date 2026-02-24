@@ -1,11 +1,11 @@
 package cn.nukkit.block.copper.golem;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.*;
 import cn.nukkit.block.property.CommonPropertyMap;
 import cn.nukkit.block.property.enums.OxidizationLevel;
-import cn.nukkit.blockentity.BlockEntityCopperGolemStatue;
-import cn.nukkit.blockentity.BlockEntityID;
+import cn.nukkit.block.blockentity.BlockEntityCopperGolemStatue;
+import cn.nukkit.block.blockentity.BlockEntityID;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.EntityID;
 import cn.nukkit.entity.mob.EntityCopperGolem;
@@ -19,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 import static cn.nukkit.block.property.CommonBlockProperties.MINECRAFT_CARDINAL_DIRECTION;
-import static cn.nukkit.blockentity.BlockEntityCopperGolemStatue.CopperPose;
+import static cn.nukkit.block.blockentity.BlockEntityCopperGolemStatue.CopperPose;
 
 /**
  * @author keksdev

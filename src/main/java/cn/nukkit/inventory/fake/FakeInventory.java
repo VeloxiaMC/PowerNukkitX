@@ -1,11 +1,7 @@
 package cn.nukkit.inventory.fake;
 
-import cn.nukkit.Player;
-import cn.nukkit.Server;
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.entity.Entity;
-import cn.nukkit.entity.EntityFakeInventory;
-import cn.nukkit.entity.EntityID;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.event.inventory.ItemStackRequestActionEvent;
 import cn.nukkit.inventory.BaseInventory;
 import cn.nukkit.inventory.InputInventory;
@@ -13,9 +9,7 @@ import cn.nukkit.inventory.Inventory;
 import cn.nukkit.inventory.InventoryHolder;
 import cn.nukkit.inventory.request.NetworkMapping;
 import cn.nukkit.item.Item;
-import cn.nukkit.level.Location;
 import cn.nukkit.math.Vector3;
-import cn.nukkit.nbt.tag.CompoundTag;
 import cn.nukkit.network.protocol.ContainerClosePacket;
 import cn.nukkit.network.protocol.ContainerOpenPacket;
 import cn.nukkit.network.protocol.types.itemstack.ContainerSlotType;

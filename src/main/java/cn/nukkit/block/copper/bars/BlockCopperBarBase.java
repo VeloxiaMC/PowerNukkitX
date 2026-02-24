@@ -1,6 +1,6 @@
 package cn.nukkit.block.copper.bars;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.*;
 import cn.nukkit.block.property.enums.OxidizationLevel;
 import cn.nukkit.item.Item;

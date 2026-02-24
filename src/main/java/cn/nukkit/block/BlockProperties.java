@@ -1,7 +1,7 @@
 package cn.nukkit.block;
 
 import cn.nukkit.block.property.type.BlockPropertyType;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import cn.nukkit.utils.HashUtils;
 import cn.nukkit.utils.Identifier;
 import com.google.common.collect.ImmutableList;

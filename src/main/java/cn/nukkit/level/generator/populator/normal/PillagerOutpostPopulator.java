@@ -4,7 +4,7 @@ import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockChest;
 import cn.nukkit.block.BlockJigsaw;
 import cn.nukkit.block.BlockWallBanner;
-import cn.nukkit.blockentity.BlockEntityBanner;
+import cn.nukkit.block.blockentity.BlockEntityBanner;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.item.Item;
 import cn.nukkit.level.Level;

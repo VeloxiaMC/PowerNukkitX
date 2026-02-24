@@ -6,14 +6,13 @@ import cn.nukkit.entity.passive.EntityAnimal;
 import cn.nukkit.level.entity.condition.Condition;
 import cn.nukkit.level.entity.condition.ConditionBiomeFilter;
 import cn.nukkit.level.entity.condition.ConditionBrightnessFilter;
-import cn.nukkit.level.entity.condition.ConditionDensityLimit;
 import cn.nukkit.level.entity.condition.ConditionInAir;
 import cn.nukkit.level.entity.condition.ConditionNot;
 import cn.nukkit.level.entity.condition.ConditionPopulationControl;
 import cn.nukkit.level.entity.condition.ConditionSpawnOnBlockFilter;
 import cn.nukkit.level.entity.condition.ConditionSpawnOnGround;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import cn.nukkit.utils.Utils;
 
 public class SpawnRuleWolf extends MultiSpawnRule {

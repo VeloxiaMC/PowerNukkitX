@@ -1,6 +1,6 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 
 public interface BlockEntityInventoryNameable extends InventoryNameable{
     BlockEntityNameable getBlockEntityInventoryHolder();

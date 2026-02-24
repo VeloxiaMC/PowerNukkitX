@@ -9,7 +9,7 @@ import cn.nukkit.level.entity.condition.ConditionPopulationControl;
 import cn.nukkit.level.entity.condition.ConditionSpawnOnBlockFilter;
 import cn.nukkit.level.entity.condition.ConditionSpawnUnderground;
 import cn.nukkit.level.entity.condition.ConditionSpawnUnderwater;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 
 public class SpawnRuleAxolotl extends SpawnRule {
 

@@ -13,7 +13,7 @@ import cn.nukkit.level.structure.PNXStructure;
 import cn.nukkit.math.NukkitMath;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 import java.util.Set;
 

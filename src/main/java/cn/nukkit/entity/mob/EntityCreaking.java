@@ -1,13 +1,13 @@
 package cn.nukkit.entity.mob;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockCreakingHeart;
 import cn.nukkit.block.BlockPaleOakLog;
 import cn.nukkit.block.BlockResinClump;
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntityCreakingHeart;
+import cn.nukkit.block.blockentity.BlockEntityCreakingHeart;
 import cn.nukkit.entity.EntityIntelligent;
 import cn.nukkit.entity.ai.behavior.Behavior;
 import cn.nukkit.entity.ai.behaviorgroup.BehaviorGroup;
@@ -223,7 +223,12 @@ public class EntityCreaking extends EntityMob {
 
     @Override
     public void updateMovement() {
+        if (!this.isAlive() || this.isClosed()) return;
+
         super.updateMovement();
+
+        if (this.ticksLived < 5) return;
+
         try {
             if(creakingHeart != null && creakingHeart.isBlockEntityValid()) {
                 creakingHeart.getHeart().updateAroundRedstone(BlockFace.UP, BlockFace.DOWN);

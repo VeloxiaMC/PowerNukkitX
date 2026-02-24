@@ -4,12 +4,9 @@ import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockPodzol;
 import cn.nukkit.block.BlockSpruceLeaves;
 import cn.nukkit.block.BlockSpruceLog;
-import cn.nukkit.block.BlockSpruceWood;
 import cn.nukkit.block.BlockState;
-import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.math.BlockFace;
 import cn.nukkit.math.Vector3;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 
 public class ObjectBigSpruceTree extends TreeGenerator {

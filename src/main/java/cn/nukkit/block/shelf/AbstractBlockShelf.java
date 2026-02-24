@@ -1,10 +1,10 @@
 package cn.nukkit.block.shelf;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.*;
 import cn.nukkit.block.property.CommonPropertyMap;
-import cn.nukkit.blockentity.BlockEntityID;
-import cn.nukkit.blockentity.BlockEntityShelf;
+import cn.nukkit.block.blockentity.BlockEntityID;
+import cn.nukkit.block.blockentity.BlockEntityShelf;
 import cn.nukkit.inventory.Inventory;
 import cn.nukkit.item.Item;
 import cn.nukkit.level.Level;

@@ -1,7 +1,7 @@
 package cn.nukkit.inventory.request;
 
-import cn.nukkit.Player;
-import cn.nukkit.blockentity.BlockEntityBeacon;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntityBeacon;
 import cn.nukkit.inventory.BeaconInventory;
 import cn.nukkit.inventory.Inventory;
 import cn.nukkit.network.protocol.types.itemstack.request.action.BeaconPaymentAction;

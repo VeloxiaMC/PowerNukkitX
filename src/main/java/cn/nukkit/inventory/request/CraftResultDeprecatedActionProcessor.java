@@ -1,12 +1,12 @@
 package cn.nukkit.inventory.request;
 
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.item.Item;
 import cn.nukkit.network.protocol.types.itemstack.request.action.CraftResultsDeprecatedAction;
 import cn.nukkit.network.protocol.types.itemstack.request.action.ItemStackRequestActionType;
 import cn.nukkit.recipe.Recipe;
-import cn.nukkit.recipe.RecipeType;
+import cn.nukkit.recipe.type.RecipeType;
 import lombok.extern.slf4j.Slf4j;
 
 import static cn.nukkit.inventory.request.CraftRecipeActionProcessor.RECIPE_DATA_KEY;

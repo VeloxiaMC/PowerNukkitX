@@ -1,6 +1,6 @@
 package cn.nukkit.inventory.request;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.inventory.Inventory;
 import cn.nukkit.inventory.LoomInventory;
 import cn.nukkit.item.Item;

@@ -1,7 +1,7 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.AdventureSettings;
-import cn.nukkit.Player;
+import cn.nukkit.player.AdventureSettings;
+import cn.nukkit.player.Player;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.item.Item;
 import cn.nukkit.level.vibration.VibrationEvent;

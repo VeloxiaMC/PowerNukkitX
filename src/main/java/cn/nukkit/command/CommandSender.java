@@ -1,6 +1,6 @@
 package cn.nukkit.command;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.lang.CommandOutputContainer;
@@ -78,7 +78,7 @@ public interface CommandSender extends Permissible {
      * To check if the sender is the console, use {@code if(sender instanceof ConsoleCommandSender)}.
      *
      * @return the name of the sender
-     * @see cn.nukkit.Player#getName()
+     * @see Player#getName()
      * @see cn.nukkit.command.ConsoleCommandSender#getName()
      * @see cn.nukkit.plugin.PluginDescription
      * @since Nukkit 1.0 | Nukkit API 1.0.0

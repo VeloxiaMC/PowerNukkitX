@@ -8,7 +8,7 @@ import cn.nukkit.level.generator.object.structures.ObjectSwampHut;
 import cn.nukkit.level.generator.populator.Populator;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 
 import static cn.nukkit.level.generator.stages.normal.NormalTerrainStage.SEA_LEVEL;

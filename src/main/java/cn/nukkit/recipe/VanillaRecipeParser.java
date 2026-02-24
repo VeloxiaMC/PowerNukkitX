@@ -6,6 +6,7 @@ import cn.nukkit.item.ItemPotion;
 import cn.nukkit.recipe.descriptor.DefaultDescriptor;
 import cn.nukkit.recipe.descriptor.ItemDescriptor;
 import cn.nukkit.recipe.descriptor.ItemTagDescriptor;
+import cn.nukkit.recipe.type.*;
 import cn.nukkit.registry.Registries;
 import cn.nukkit.utils.JSONUtils;
 import com.google.gson.reflect.TypeToken;

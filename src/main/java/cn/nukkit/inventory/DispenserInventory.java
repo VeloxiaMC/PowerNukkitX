@@ -1,8 +1,8 @@
 package cn.nukkit.inventory;
 
 
-import cn.nukkit.blockentity.BlockEntityDispenser;
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.block.blockentity.BlockEntityDispenser;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 
 
 public class DispenserInventory extends EjectableInventory {

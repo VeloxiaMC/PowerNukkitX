@@ -1,6 +1,6 @@
 package cn.nukkit.recipe.descriptor;
 
-import cn.nukkit.tags.ItemTags;
+import cn.nukkit.nbt.tags.ItemTags;
 import cn.nukkit.item.Item;
 
 import java.util.Objects;

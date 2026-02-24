@@ -1,10 +1,10 @@
 package cn.nukkit.entity.ai.executor.coppergolem;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.copper.chest.BlockCopperChest;
-import cn.nukkit.blockentity.BlockEntityChest;
+import cn.nukkit.block.blockentity.BlockEntityChest;
 import cn.nukkit.entity.EntityIntelligent;
 import cn.nukkit.entity.ai.executor.EntityControl;
 import cn.nukkit.entity.ai.executor.IBehaviorExecutor;

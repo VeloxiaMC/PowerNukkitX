@@ -1,6 +1,6 @@
 package cn.nukkit.recipe.special;
 
-import cn.nukkit.recipe.SmithingTrimRecipe;
+import cn.nukkit.recipe.type.SmithingTrimRecipe;
 import cn.nukkit.recipe.descriptor.ItemTagDescriptor;
 
 public class SmithingArmorTrimCorrectedRecipe extends SmithingTrimRecipe {

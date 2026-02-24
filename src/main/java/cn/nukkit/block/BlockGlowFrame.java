@@ -1,7 +1,7 @@
 package cn.nukkit.block;
 
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import org.jetbrains.annotations.NotNull;
 
 public class BlockGlowFrame extends BlockFrame {

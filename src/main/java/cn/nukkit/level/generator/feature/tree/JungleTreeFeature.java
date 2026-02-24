@@ -1,16 +1,11 @@
 package cn.nukkit.level.generator.feature.tree;
 
-import cn.nukkit.block.BlockJungleLeaves;
-import cn.nukkit.block.BlockJungleLog;
-import cn.nukkit.block.property.CommonBlockProperties;
 import cn.nukkit.level.generator.feature.GriddedFeature;
 import cn.nukkit.level.generator.object.ObjectJungleTree;
 import cn.nukkit.level.generator.object.ObjectGenerator;
 import cn.nukkit.level.generator.object.ObjectJungleBigTree;
-import cn.nukkit.math.BlockFace;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.utils.random.NukkitRandom;
+import cn.nukkit.nbt.tags.BiomeTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 
 public class JungleTreeFeature extends GriddedFeature {
