@@ -38,10 +38,10 @@ public final class BlockStateRegistry implements IRegistry<Integer, BlockState, 
                 if(BlockRegistry.shouldSkip(name)) continue; //Skip blocks
                 BlockState state = Registries.BLOCKSTATE.get(hash);
                 if(state == null) {
-                    Server.getInstance().getLogger().alert(name + " (" + hash + ") was not a part of block_states.json.");
+                    Server.getInstance().getLogger().debug(name + " (" + hash + ") was not a part of block_states.json.");
                 } else {
                     if(!state.getIdentifier().equals(name)) {
-                        Server.getInstance().getLogger().alert("BlockState " + hash + " was not " + name + ". Instead it is " + state.getIdentifier());
+                        Server.getInstance().getLogger().debug("BlockState " + hash + " was not " + name + ". Instead it is " + state.getIdentifier());
                     }
                 }
                 String hexString = entry.get("mapColor").getAsString().substring(1, 9);

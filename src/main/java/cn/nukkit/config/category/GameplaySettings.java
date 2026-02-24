@@ -45,11 +45,6 @@ public class GameplaySettings extends OkaeriConfig {
     boolean forceResources = false;
     @Comment("pnx.settings.gameplay.allowClientPacks")
     boolean allowClientPacks = true;
-    @Comment("pnx.settings.gameplay.packCdn")
-    HashMap<String, String> packCdn = new HashMap<>(Map.of(
-            "PMC_HubUI.zip", "https://cdn.pylemc.com/packs/hub/PMC_HubUI.zip",
-            "PMC_HubEntity", "https://cdn.pylemc.com/packs/hub/PMC_HubEntity.zip"
-    ));
     @Comment("pnx.settings.gameplay.serverAuthoritativeMovement")
     String serverAuthoritativeMovement = "server-auth";
     @Comment("pnx.settings.gameplay.allowVibrantVisuals")
