@@ -1,10 +1,9 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
-import cn.nukkit.Server;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.blockentity.BlockEntityBrewingStand;
+import cn.nukkit.block.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntityBrewingStand;
 import cn.nukkit.inventory.ContainerInventory;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemTool;

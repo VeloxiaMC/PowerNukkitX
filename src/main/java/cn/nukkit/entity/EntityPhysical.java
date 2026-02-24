@@ -1,6 +1,6 @@
 package cn.nukkit.entity;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockFlowingLava;
 import cn.nukkit.block.BlockLiquid;

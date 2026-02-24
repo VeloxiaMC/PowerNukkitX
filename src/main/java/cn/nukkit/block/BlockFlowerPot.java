@@ -1,9 +1,9 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.blockentity.BlockEntityFlowerPot;
+import cn.nukkit.block.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntityFlowerPot;
 import cn.nukkit.item.Item;
 import cn.nukkit.level.Level;
 import cn.nukkit.math.AxisAlignedBB;

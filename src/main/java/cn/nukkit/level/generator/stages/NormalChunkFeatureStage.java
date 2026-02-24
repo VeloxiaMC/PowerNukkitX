@@ -10,7 +10,7 @@ import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinitionChunkGenData;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinitionData;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 import cn.nukkit.utils.OptionalValue;
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import lombok.extern.slf4j.Slf4j;

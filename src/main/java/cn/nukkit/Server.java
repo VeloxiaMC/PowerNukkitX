@@ -8,13 +8,12 @@ import cn.nukkit.command.PluginIdentifiableCommand;
 import cn.nukkit.command.SimpleCommandMap;
 import cn.nukkit.command.defaults.WorldCommand;
 import cn.nukkit.command.function.FunctionManager;
-import cn.nukkit.compression.ZlibChooser;
+import cn.nukkit.network.compression.ZlibChooser;
 import cn.nukkit.config.ServerSettings;
 import cn.nukkit.config.YamlSnakeYamlConfigurer;
 import cn.nukkit.config.updater.ConfigUpdater;
 import cn.nukkit.console.NukkitConsole;
-import cn.nukkit.dispenser.DispenseBehaviorRegister;
-import cn.nukkit.education.Education;
+import cn.nukkit.block.dispenser.DispenseBehaviorRegister;
 import cn.nukkit.entity.Attribute;
 import cn.nukkit.entity.data.Skin;
 import cn.nukkit.entity.data.profession.Profession;
@@ -51,7 +50,6 @@ import cn.nukkit.math.Vector3;
 import cn.nukkit.metadata.EntityMetadataStore;
 import cn.nukkit.metadata.LevelMetadataStore;
 import cn.nukkit.metadata.PlayerMetadataStore;
-import cn.nukkit.metrics.NukkitMetrics;
 import cn.nukkit.nbt.NBTIO;
 import cn.nukkit.nbt.tag.ByteTag;
 import cn.nukkit.nbt.tag.CompoundTag;
@@ -69,13 +67,15 @@ import cn.nukkit.network.process.NetworkState;
 import cn.nukkit.network.protocol.DataPacket;
 import cn.nukkit.network.protocol.PlayerListPacket;
 import cn.nukkit.network.protocol.ProtocolInfo;
-import cn.nukkit.network.protocol.types.ExperimentEntry;
 import cn.nukkit.network.protocol.types.PlayerInfo;
 import cn.nukkit.network.protocol.types.XboxLivePlayerInfo;
 import cn.nukkit.permission.BanEntry;
 import cn.nukkit.permission.BanList;
 import cn.nukkit.permission.DefaultPermissions;
 import cn.nukkit.permission.Permissible;
+import cn.nukkit.player.IPlayer;
+import cn.nukkit.player.OfflinePlayer;
+import cn.nukkit.player.Player;
 import cn.nukkit.plugin.InternalPlugin;
 import cn.nukkit.plugin.JavaPluginLoader;
 import cn.nukkit.plugin.Plugin;
@@ -83,7 +83,7 @@ import cn.nukkit.plugin.PluginLoadOrder;
 import cn.nukkit.plugin.PluginManager;
 import cn.nukkit.plugin.service.NKServiceManager;
 import cn.nukkit.plugin.service.ServiceManager;
-import cn.nukkit.positiontracking.PositionTrackingService;
+import cn.nukkit.utils.positiontracking.PositionTrackingService;
 import cn.nukkit.recipe.Recipe;
 import cn.nukkit.registry.RecipeRegistry;
 import cn.nukkit.registry.Registries;
@@ -95,9 +95,9 @@ import cn.nukkit.scheduler.Task;
 import cn.nukkit.scoreboard.manager.IScoreboardManager;
 import cn.nukkit.scoreboard.manager.ScoreboardManager;
 import cn.nukkit.scoreboard.storage.JSONScoreboardStorage;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.tags.BlockTags;
-import cn.nukkit.tags.ItemTags;
+import cn.nukkit.nbt.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BlockTags;
+import cn.nukkit.nbt.tags.ItemTags;
 import cn.nukkit.utils.*;
 import cn.nukkit.utils.collection.FreezableArrayManager;
 import cn.nukkit.wizard.WizardConfig;
@@ -262,7 +262,6 @@ public class Server {
     private final Thread currentThread;
     private final long launchTime;
     private final ServerSettings settings;
-    private Watchdog watchdog;
     private DB playerDataDB;
     private boolean useTerra;
     private FreezableArrayManager freezableArrayManager;
@@ -272,7 +271,6 @@ public class Server {
     private Level defaultLevel = null;
     private boolean allowNether;
     private boolean allowTheEnd;
-    private List<ExperimentEntry> experiments;
 
     Server(final String filePath, String dataPath, String pluginPath, String predefinedLanguage, WizardConfig wizardConfig) {
         Preconditions.checkState(instance == null, "Already initialized!");
@@ -338,26 +336,41 @@ public class Server {
             it.load(true);
         });
 
-        if (wizardConfig != null && !config.exists()) {
-            this.settings.baseSettings().language(wizardConfig.getLanguage());
-            this.settings.baseSettings().motd(wizardConfig.getMotd());
-            this.settings.baseSettings().port(wizardConfig.getPort());
-            this.settings.baseSettings().maxPlayers(wizardConfig.getMaxPlayers());
-            this.settings.gameplaySettings().gamemode(wizardConfig.getGamemode());
-            this.settings.baseSettings().allowList(wizardConfig.isWhitelistEnabled());
-            this.settings.networkSettings().enableQuery(wizardConfig.isQueryEnabled());
-        } else {
-            this.settings.baseSettings().language(chooseLanguage);
-            if (wizardConfig != null) {
-                if (wizardConfig.getMotd() != null && !wizardConfig.getMotd().isEmpty()) {
-                    this.settings.baseSettings().motd(wizardConfig.getMotd());
+        var base = this.settings.baseSettings();
+
+        if (wizardConfig != null) {
+            boolean isFirstSetup = !config.exists();
+
+            if (isFirstSetup) {
+                base.language(wizardConfig.getLanguage());
+                base.motd(wizardConfig.getMotd());
+                base.port(wizardConfig.getPort());
+                base.maxPlayers(wizardConfig.getMaxPlayers());
+                base.allowList(wizardConfig.isWhitelistEnabled());
+
+                this.settings.gameplaySettings()
+                        .gamemode(wizardConfig.getGamemode());
+
+                this.settings.networkSettings()
+                        .enableQuery(wizardConfig.isQueryEnabled());
+
+            } else {
+                base.language(chooseLanguage);
+
+                if (!wizardConfig.getMotd().isEmpty()) {
+                    base.motd(wizardConfig.getMotd());
                 }
+
                 if (wizardConfig.getPort() != 19132) {
-                    this.settings.baseSettings().port(wizardConfig.getPort());
+                    base.port(wizardConfig.getPort());
                 }
             }
+        } else {
+            this.settings.baseSettings().language(chooseLanguage);
         }
+
         this.settings.save();
+
         while(updateConfiguration());
 
         this.computeThreadPool = new ForkJoinPool(Math.min(0x7fff, Runtime.getRuntime().availableProcessors()), new ComputeThreadPoolThreadFactory(), null, false);
@@ -406,10 +419,6 @@ public class Server {
             this.checkLoginTime = false;
         }
 
-        this.experiments = new ArrayList<>();
-        for(String experiment : settings.gameplaySettings().experiments())
-            experiments.add(new ExperimentEntry(experiment, true));
-
         this.entityMetadata = new EntityMetadataStore();
         this.playerMetadata = new PlayerMetadataStore();
         this.levelMetadata = new LevelMetadataStore();
@@ -442,9 +451,6 @@ public class Server {
         log.info(this.getLanguage().tr("nukkit.server.license"));
         this.consoleSender = new ConsoleCommandSender();
 
-        // Initialize metrics
-        NukkitMetrics.startNow(this);
-
         {//init
             Registries.POTION.init();
             Registries.PACKET.init();
@@ -473,12 +479,6 @@ public class Server {
             Attribute.init();
             BlockComposter.init();
             DispenseBehaviorRegister.init();
-        }
-
-        if(settings.gameplaySettings().enableEducation()) {
-            Education.enable();
-            if(settings.baseSettings().waterdogpe())
-                log.info("You have Education and WaterdogPE enabled at the same time. Make sure to enable Education on WaterdogPE as well.");
         }
 
         if (useTerra) {//load terra
@@ -579,16 +579,10 @@ public class Server {
         EntityProperty.buildEntityProperty();
         EntityProperty.buildPlayerProperty();
 
-        if(settings.gameplaySettings().enableEducation()) Education.registerCreative();
-
         if (settings.miscSettings().installSpark()) {
             SparkInstaller.initSpark(this);
         }
 
-        if (!Boolean.parseBoolean(System.getProperty("disableWatchdog", "false"))) {
-            this.watchdog = new Watchdog(this, 60000);//60s
-            this.watchdog.start();
-        }
         Runtime.getRuntime().addShutdownHook(new Thread(this::shutdown));
         this.start();
     }
@@ -789,8 +783,6 @@ public class Server {
                 player.close(player.getLeaveMessage(), getSettings().miscSettings().shutdownMessage());
             }
 
-            this.getSettings().save();
-
             log.debug("Disabling all plugins");
             this.pluginManager.disablePlugins();
 
@@ -820,11 +812,6 @@ public class Server {
             log.debug("Stopping network interfaces");
             network.shutdown();
             playerDataDB.close();
-            //close watchdog and metrics
-            if (this.watchdog != null) {
-                this.watchdog.running = false;
-            }
-            NukkitMetrics.closeNow(this);
             //close threadPool
             ForkJoinPool.commonPool().shutdownNow();
             this.computeThreadPool.shutdownNow();
@@ -1646,7 +1633,7 @@ public class Server {
      *
      * @param info the player info
      */
-    void updateName(PlayerInfo info) {
+    public void updateName(PlayerInfo info) {
         var uniqueId = info.getUniqueId();
         var name = info.getUsername();
 
@@ -1775,7 +1762,6 @@ public class Server {
                             .add(new DoubleTag(spawn.z)))
                     .putString("Level", this.getDefaultLevel().getName())
                     .putList("Inventory", new ListTag<>())
-                    .putCompound("Achievements", new CompoundTag())
                     .putInt("playerGameType", this.getGamemode())
                     .putList("Motion", new ListTag<DoubleTag>()
                             .add(new DoubleTag(0))
@@ -2025,7 +2011,7 @@ public class Server {
      * @return The name of server
      */
     public String getName() {
-        return "PowerNukkitX";
+        return "VPowerNukkitX";
     }
 
     public String getNukkitVersion() {
@@ -2769,11 +2755,6 @@ public class Server {
         return settings.gameplaySettings().allowVibrantVisuals();
     }
 
-    public List<ExperimentEntry> getExperiments() {
-        return experiments;
-    }
-  
-  
 
     /** Allow plugins to override the default DP group UUID (e.g., when migrating from BDS). */
     public static void setDefaultDynamicPropertiesGroupUUID(String uuid) {

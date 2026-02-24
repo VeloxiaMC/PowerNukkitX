@@ -7,8 +7,6 @@ public enum LegacyServerPropertiesKeys {
     SERVER_IP("server-ip"),
     VIEW_DISTANCE("view-distance"),
     WHITE_LIST("white-list"),
-    ACHIEVEMENTS("achievements"),
-    ANNOUNCE_PLAYER_ACHIEVEMENTS("announce-player-achievements"),
     SPAWN_PROTECTION("spawn-protection"),
     MAX_PLAYERS("max-players"),
     ALLOW_FLIGHT("allow-flight"),

@@ -1,8 +1,8 @@
 package cn.nukkit.block;
 
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.blockentity.BlockEntitySculkCatalyst;
+import cn.nukkit.block.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntitySculkCatalyst;
 import cn.nukkit.item.ItemTool;
 import org.jetbrains.annotations.NotNull;
 

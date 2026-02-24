@@ -1,6 +1,6 @@
 package cn.nukkit.item;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.entity.item.EntityCrossbowFirework;
 import cn.nukkit.entity.projectile.EntityArrow;

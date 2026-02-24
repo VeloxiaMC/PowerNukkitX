@@ -1,6 +1,6 @@
 package cn.nukkit.network.connection.netty.initializer;
 
-import cn.nukkit.compression.CompressionProvider;
+import cn.nukkit.network.compression.CompressionProvider;
 import cn.nukkit.network.connection.netty.codec.compression.CompressionCodec;
 import cn.nukkit.network.connection.netty.codec.compression.CompressionStrategy;
 import cn.nukkit.network.connection.netty.codec.compression.NoopCompression;

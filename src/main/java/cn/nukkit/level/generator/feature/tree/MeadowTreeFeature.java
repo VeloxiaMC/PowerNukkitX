@@ -1,6 +1,6 @@
 package cn.nukkit.level.generator.feature.tree;
 
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 
 public class MeadowTreeFeature extends PlainsTreeFeature {
 

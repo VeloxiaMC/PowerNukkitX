@@ -1,6 +1,6 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.event.block.BlockFromToEvent;
 import cn.nukkit.event.player.PlayerInteractEvent;
 import cn.nukkit.event.player.PlayerInteractEvent.Action;

@@ -2,11 +2,11 @@ package cn.nukkit.level;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockState;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.level.format.IChunk;
 import cn.nukkit.math.BlockFace;
 import cn.nukkit.math.Vector3;
-import cn.nukkit.positiontracking.NamedPosition;
+import cn.nukkit.utils.positiontracking.NamedPosition;
 import cn.nukkit.utils.LevelException;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;

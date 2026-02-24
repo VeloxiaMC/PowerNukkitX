@@ -53,6 +53,7 @@ public final class BlockStateRegistry implements IRegistry<Integer, BlockState, 
                 Block.VANILLA_BLOCK_COLOR_MAP.put(hash, new BlockColor(r, g, b, a, tint));
             }
         } catch (IOException e) {
+            Server.getInstance().getLogger().alert(e.getMessage());
         }
     }
 
@@ -82,16 +83,14 @@ public final class BlockStateRegistry implements IRegistry<Integer, BlockState, 
 
     @Override
     public void register(Integer key, BlockState value) throws RegisterException {
-        if (REGISTRY.putIfAbsent(key, value) == null) {
-        } else {
+        if (REGISTRY.putIfAbsent(key, value) != null) {
             throw new RegisterException("The blockstate has been registered!");
         }
     }
 
     public void register(BlockState value) throws RegisterException {
         BlockState now;
-        if ((now = REGISTRY.put(value.blockStateHash(), value)) == null) {
-        } else {
+        if ((now = REGISTRY.put(value.blockStateHash(), value)) != null) {
             throw new RegisterException("The blockstate " + value + "has been registered,\n current value: " + now);
         }
     }

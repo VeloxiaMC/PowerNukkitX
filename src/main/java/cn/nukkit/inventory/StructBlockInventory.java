@@ -1,7 +1,7 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.Player;
-import cn.nukkit.blockentity.BlockEntityStructBlock;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntityStructBlock;
 import cn.nukkit.event.inventory.InventoryCloseEvent;
 import cn.nukkit.event.inventory.InventoryOpenEvent;
 import cn.nukkit.item.Item;

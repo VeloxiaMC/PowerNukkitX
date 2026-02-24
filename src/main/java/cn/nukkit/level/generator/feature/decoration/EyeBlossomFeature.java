@@ -2,14 +2,11 @@ package cn.nukkit.level.generator.feature.decoration;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockClosedEyeblossom;
-import cn.nukkit.block.BlockFern;
-import cn.nukkit.block.BlockShortGrass;
 import cn.nukkit.block.BlockState;
 import cn.nukkit.level.generator.object.BlockManager;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.tags.BlockTags;
-import cn.nukkit.utils.random.NukkitRandom;
+import cn.nukkit.nbt.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BlockTags;
 
 public class EyeBlossomFeature extends SurfaceGenerateFeature {
 

@@ -1,9 +1,9 @@
 package cn.nukkit.network.process.processor;
 
-import cn.nukkit.Player;
-import cn.nukkit.PlayerHandle;
+import cn.nukkit.player.Player;
+import cn.nukkit.player.PlayerHandle;
 import cn.nukkit.block.Block;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.event.player.PlayerBlockPickEvent;
 import cn.nukkit.inventory.HumanInventory;
 import cn.nukkit.item.Item;

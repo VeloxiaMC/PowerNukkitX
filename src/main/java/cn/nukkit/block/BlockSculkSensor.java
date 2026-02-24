@@ -1,7 +1,7 @@
 package cn.nukkit.block;
 
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.blockentity.BlockEntitySculkSensor;
+import cn.nukkit.block.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntitySculkSensor;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.Sound;
 import cn.nukkit.math.AxisAlignedBB;

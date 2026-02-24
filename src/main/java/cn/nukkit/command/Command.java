@@ -1,8 +1,8 @@
 package cn.nukkit.command;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
-import cn.nukkit.blockentity.ICommandBlock;
+import cn.nukkit.block.blockentity.ICommandBlock;
 import cn.nukkit.command.data.CommandData;
 import cn.nukkit.command.data.CommandDataVersions;
 import cn.nukkit.command.data.CommandEnum;

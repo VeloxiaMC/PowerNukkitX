@@ -2,7 +2,7 @@ package cn.nukkit.block;
 
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemShulkerBox;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;

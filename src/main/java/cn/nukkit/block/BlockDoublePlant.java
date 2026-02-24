@@ -1,6 +1,6 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.enums.DoublePlantType;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemBlock;
@@ -8,7 +8,7 @@ import cn.nukkit.item.ItemID;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.particle.BoneMealParticle;
 import cn.nukkit.math.BlockFace;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.ThreadLocalRandom;

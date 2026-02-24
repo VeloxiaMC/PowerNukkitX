@@ -3,7 +3,7 @@ package cn.nukkit.level.format;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockAir;
 import cn.nukkit.block.BlockState;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.level.DimensionData;
 import cn.nukkit.nbt.tag.CompoundTag;

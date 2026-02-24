@@ -2,7 +2,7 @@ package cn.nukkit.item;
 
 import cn.nukkit.Server;
 import cn.nukkit.nbt.tag.CompoundTag;
-import cn.nukkit.positiontracking.NamedPosition;
+import cn.nukkit.utils.positiontracking.NamedPosition;
 
 import javax.annotation.Nullable;
 import java.io.IOException;

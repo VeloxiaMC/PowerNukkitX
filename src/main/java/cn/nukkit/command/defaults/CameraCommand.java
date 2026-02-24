@@ -1,6 +1,6 @@
 package cn.nukkit.command.defaults;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.camera.data.CameraPreset;
 import cn.nukkit.camera.data.Ease;
 import cn.nukkit.camera.data.EaseType;

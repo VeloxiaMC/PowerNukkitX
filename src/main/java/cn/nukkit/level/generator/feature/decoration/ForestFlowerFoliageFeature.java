@@ -10,8 +10,7 @@ import cn.nukkit.level.generator.feature.CountGenerateFeature;
 import cn.nukkit.level.generator.object.BlockManager;
 import cn.nukkit.math.NukkitMath;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.utils.random.NukkitRandom;
+import cn.nukkit.nbt.tags.BiomeTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 
 public class ForestFlowerFoliageFeature extends CountGenerateFeature {

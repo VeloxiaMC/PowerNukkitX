@@ -1,9 +1,9 @@
 package cn.nukkit.network.process.processor;
 
-import cn.nukkit.PlayerHandle;
+import cn.nukkit.player.PlayerHandle;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockCrafter;
-import cn.nukkit.blockentity.BlockEntityCrafter;
+import cn.nukkit.block.blockentity.BlockEntityCrafter;
 import cn.nukkit.level.Level;
 import cn.nukkit.math.BlockVector3;
 import cn.nukkit.network.process.DataPacketProcessor;

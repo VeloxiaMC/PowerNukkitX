@@ -1,11 +1,11 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.customblock.CustomBlock;
 import cn.nukkit.block.customblock.CustomBlockDefinition;
 import cn.nukkit.block.customblock.CustomBlockDefinition.BlockTickSettings;
 import cn.nukkit.block.property.type.BlockPropertyType;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.effect.Effect;
 import cn.nukkit.entity.effect.EffectType;
@@ -29,7 +29,7 @@ import cn.nukkit.nbt.tag.Tag;
 import cn.nukkit.plugin.Plugin;
 import cn.nukkit.registry.BlockRegistry;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import cn.nukkit.utils.BlockColor;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import lombok.extern.slf4j.Slf4j;

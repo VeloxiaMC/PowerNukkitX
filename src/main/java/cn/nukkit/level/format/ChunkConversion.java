@@ -1,7 +1,7 @@
 package cn.nukkit.level.format;
 
 import cn.nukkit.block.BlockState;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.nbt.tag.CompoundTag;
 import lombok.extern.slf4j.Slf4j;
 

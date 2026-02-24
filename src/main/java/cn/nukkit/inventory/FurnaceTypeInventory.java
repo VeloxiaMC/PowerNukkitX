@@ -2,7 +2,7 @@ package cn.nukkit.inventory;
 
 
 
-import cn.nukkit.blockentity.BlockEntityFurnace;
+import cn.nukkit.block.blockentity.BlockEntityFurnace;
 import cn.nukkit.network.protocol.types.itemstack.ContainerSlotType;
 
 import java.util.Map;

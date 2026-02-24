@@ -6,15 +6,17 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(fluent = true)
 public class GameplaySettings extends OkaeriConfig {
+    @Comment("pnx.settings.gameplay.mobAi")
+    boolean mobAi = false;
     @Comment("pnx.settings.gameplay.enablecommandblocks")
-    boolean enableCommandBlocks = true;
+    boolean enableCommandBlocks = false;
     @Comment("pnx.settings.gameplay.allowbeta")
     boolean allowBeta = false;
     @Comment("pnx.settings.gameplay.enableredstone")
@@ -23,10 +25,6 @@ public class GameplaySettings extends OkaeriConfig {
     boolean tickRedstone = true;
     @Comment("pnx.settings.gameplay.viewDistance")
     int viewDistance = 8;
-    @Comment("pnx.settings.gameplay.achivements")
-    boolean achievements = true;
-    @Comment("pnx.settings.gameplay.announceAchievements")
-    boolean announceAchievements = true;
     @Comment("pnx.settings.gameplay.spawnProtection")
     int spawnProtection = 16;
     @Comment("pnx.settings.gameplay.gamemode")
@@ -47,23 +45,15 @@ public class GameplaySettings extends OkaeriConfig {
     boolean forceResources = false;
     @Comment("pnx.settings.gameplay.allowClientPacks")
     boolean allowClientPacks = true;
+    @Comment("pnx.settings.gameplay.packCdn")
+    HashMap<String, String> packCdn = new HashMap<>(Map.of(
+            "PMC_HubUI.zip", "https://cdn.pylemc.com/packs/hub/PMC_HubUI.zip",
+            "PMC_HubEntity", "https://cdn.pylemc.com/packs/hub/PMC_HubEntity.zip"
+    ));
     @Comment("pnx.settings.gameplay.serverAuthoritativeMovement")
     String serverAuthoritativeMovement = "server-auth";
     @Comment("pnx.settings.gameplay.allowVibrantVisuals")
     boolean allowVibrantVisuals = true;
-    @Comment("pnx.settings.gameplay.experiments")
-    ArrayList<String> experiments = new ArrayList<>(List.of(
-            "data_driven_biomes",
-            "experimental_creator_cameras",
-            "gametest",
-            "jigsaw_structures",
-            "upcoming_creator_features",
-            "villager_trades_rebalance"
-    ));
     @Comment("pnx.settings.gameplay.cacheStructures")
     boolean cacheStructures = false;
-    @Comment("pnx.settings.gameplay.enableEdu")
-    boolean enableEducation = false;
-    @Comment("pnx.settings.gameplay.muteEmoteAnnouncements")
-    boolean muteEmoteAnnouncements = false;
 }

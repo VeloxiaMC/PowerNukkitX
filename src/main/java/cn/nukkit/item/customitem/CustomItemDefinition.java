@@ -16,7 +16,7 @@ import cn.nukkit.nbt.tag.ListTag;
 import cn.nukkit.nbt.tag.StringTag;
 import cn.nukkit.nbt.tag.Tag;
 import cn.nukkit.network.protocol.types.inventory.creative.CreativeCustomGroups;
-import cn.nukkit.tags.ItemTags;
+import cn.nukkit.nbt.tags.ItemTags;
 import cn.nukkit.utils.Identifier;
 
 import java.util.ArrayList;

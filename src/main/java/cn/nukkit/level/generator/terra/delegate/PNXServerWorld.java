@@ -4,7 +4,6 @@ import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockID;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.Position;
-import cn.nukkit.level.format.ChunkState;
 import cn.nukkit.level.format.IChunk;
 import cn.nukkit.level.generator.object.BlockManager;
 import cn.nukkit.level.generator.terra.PNXAdapter;
@@ -89,7 +88,7 @@ public class PNXServerWorld implements ServerWorld {
 
     @Override
     public BlockEntity getBlockEntity(int x, int y, int z) {
-        cn.nukkit.blockentity.BlockEntity blockEntity =
+        cn.nukkit.block.blockentity.BlockEntity blockEntity =
                 level.getLevel().getBlockEntity(new BlockVector3(x, y, z));
         return null;
     }

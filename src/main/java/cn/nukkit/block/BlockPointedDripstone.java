@@ -1,6 +1,6 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.block.property.enums.CauldronLiquid;
 import cn.nukkit.block.property.enums.DripstoneThickness;

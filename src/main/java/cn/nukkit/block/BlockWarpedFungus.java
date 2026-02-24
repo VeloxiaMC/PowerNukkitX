@@ -1,6 +1,6 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.event.level.StructureGrowEvent;
 import cn.nukkit.level.generator.object.BlockManager;
 import cn.nukkit.level.generator.object.legacytree.LegacyWarpedTree;

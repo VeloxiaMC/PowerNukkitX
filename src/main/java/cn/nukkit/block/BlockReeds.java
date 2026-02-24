@@ -1,6 +1,6 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.event.block.BlockGrowEvent;
 import cn.nukkit.item.Item;
@@ -8,7 +8,7 @@ import cn.nukkit.item.ItemSugarCane;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.particle.BoneMealParticle;
 import cn.nukkit.math.BlockFace;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;

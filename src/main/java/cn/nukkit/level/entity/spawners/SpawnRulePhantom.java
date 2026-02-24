@@ -9,7 +9,7 @@ import cn.nukkit.level.entity.condition.ConditionDensityLimit;
 import cn.nukkit.level.entity.condition.ConditionDifficultyFilter;
 import cn.nukkit.level.entity.condition.ConditionInAir;
 import cn.nukkit.level.entity.condition.ConditionSpawnOnSurface;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 
 public class SpawnRulePhantom extends SpawnRule {
 

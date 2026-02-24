@@ -3,6 +3,7 @@ package cn.nukkit;
 import cn.nukkit.level.PlayerChunkManager;
 import cn.nukkit.network.connection.BedrockSession;
 import cn.nukkit.network.protocol.types.PlayerInfo;
+import cn.nukkit.player.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class TestPlayer extends Player {

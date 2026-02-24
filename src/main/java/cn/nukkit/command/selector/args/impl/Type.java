@@ -1,6 +1,6 @@
 package cn.nukkit.command.selector.args.impl;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.selector.ParseUtils;
 import cn.nukkit.command.selector.SelectorType;

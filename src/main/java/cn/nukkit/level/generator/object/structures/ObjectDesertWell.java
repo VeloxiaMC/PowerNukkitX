@@ -11,8 +11,8 @@ import cn.nukkit.level.generator.object.RuledObjectGenerator;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 
 public class ObjectDesertWell extends RuledObjectGenerator {

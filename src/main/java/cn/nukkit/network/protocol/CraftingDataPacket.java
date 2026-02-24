@@ -6,6 +6,7 @@ import cn.nukkit.network.protocol.types.RecipeUnlockingRequirement;
 import cn.nukkit.recipe.*;
 import cn.nukkit.recipe.descriptor.DefaultDescriptor;
 import cn.nukkit.recipe.descriptor.ItemDescriptor;
+import cn.nukkit.recipe.type.*;
 import lombok.*;
 
 import java.util.ArrayList;

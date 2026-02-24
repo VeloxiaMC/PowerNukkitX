@@ -11,7 +11,6 @@ import cn.nukkit.block.copper.lightningrod.*;
 import cn.nukkit.block.customblock.CustomBlock;
 import cn.nukkit.block.customblock.CustomBlockDefinition;
 import cn.nukkit.block.shelf.*;
-import cn.nukkit.education.Education;
 import cn.nukkit.item.ItemBlock;
 import cn.nukkit.level.Level;
 import cn.nukkit.nbt.tag.CompoundTag;
@@ -1499,7 +1498,7 @@ public final class BlockRegistry implements BlockID, IRegistry<String, Block, Cl
     }
 
     public static boolean shouldSkip(String bid) {
-        return (!Education.isEnabled() && Education.eduBlocks.contains(bid)) || skipBlocks.contains(bid);
+        return skipBlocks.contains(bid);
     }
 
     public static CustomBlockDefinition getCustomBlockDefinition(String identifier) {

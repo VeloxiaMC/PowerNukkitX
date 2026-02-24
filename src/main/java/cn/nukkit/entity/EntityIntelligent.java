@@ -1,6 +1,6 @@
 package cn.nukkit.entity;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.entity.ai.EntityAI;
 import cn.nukkit.entity.ai.behaviorgroup.EmptyBehaviorGroup;
 import cn.nukkit.entity.ai.behaviorgroup.IBehaviorGroup;

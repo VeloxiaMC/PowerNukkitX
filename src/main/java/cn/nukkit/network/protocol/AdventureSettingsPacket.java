@@ -1,12 +1,11 @@
 package cn.nukkit.network.protocol;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.network.connection.util.HandleByteBuf;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import cn.nukkit.network.connection.util.HandleByteBuf;
 import lombok.*;
 
 @Getter

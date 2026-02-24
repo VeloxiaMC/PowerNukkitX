@@ -1,8 +1,8 @@
 package cn.nukkit.block;
 
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.blockentity.BlockEntitySmoker;
+import cn.nukkit.block.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntitySmoker;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemBlock;
 import org.jetbrains.annotations.NotNull;

@@ -1,8 +1,8 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.Player;
-import cn.nukkit.blockentity.BlockEntityEnchantTable;
-import cn.nukkit.blockentity.BlockEntityNameable;
+import cn.nukkit.player.Player;
+import cn.nukkit.block.blockentity.BlockEntityEnchantTable;
+import cn.nukkit.block.blockentity.BlockEntityNameable;
 import cn.nukkit.event.player.PlayerEnchantOptionsRequestEvent;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.enchantment.EnchantmentHelper;

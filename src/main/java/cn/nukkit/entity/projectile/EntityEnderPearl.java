@@ -1,9 +1,8 @@
 package cn.nukkit.entity.projectile;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.Block;
 import cn.nukkit.entity.Entity;
-import cn.nukkit.entity.item.EntityTntMinecart;
 import cn.nukkit.entity.mob.EntityEndermite;
 import cn.nukkit.event.entity.EntityDamageByEntityEvent;
 import cn.nukkit.event.entity.EntityDamageEvent;

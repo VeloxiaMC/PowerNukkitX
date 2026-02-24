@@ -3,7 +3,7 @@ package cn.nukkit.level.entity.spawners;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.mob.EntityMob;
 import cn.nukkit.level.entity.condition.*;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 
 public class SpawnRuleSpider extends SpawnRule {
 

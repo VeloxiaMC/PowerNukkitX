@@ -1,12 +1,11 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
-import cn.nukkit.Server;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.CommonBlockProperties;
 import cn.nukkit.block.property.CommonPropertyMap;
 import cn.nukkit.block.property.enums.Orientation;
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.blockentity.BlockEntityCrafter;
+import cn.nukkit.block.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntityCrafter;
 import cn.nukkit.event.inventory.CraftItemEvent;
 import cn.nukkit.inventory.Inventory;
 import cn.nukkit.inventory.InventoryHolder;
@@ -18,7 +17,7 @@ import cn.nukkit.level.Sound;
 import cn.nukkit.math.BlockFace;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.network.protocol.LevelEventPacket;
-import cn.nukkit.recipe.MultiRecipe;
+import cn.nukkit.recipe.type.MultiRecipe;
 import cn.nukkit.recipe.Recipe;
 import cn.nukkit.utils.RedstoneComponent;
 import org.jetbrains.annotations.NotNull;

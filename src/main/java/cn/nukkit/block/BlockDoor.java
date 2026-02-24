@@ -1,7 +1,7 @@
 package cn.nukkit.block;
 
-import cn.nukkit.AdventureSettings;
-import cn.nukkit.Player;
+import cn.nukkit.player.AdventureSettings;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.CommonBlockProperties;
 import cn.nukkit.block.property.enums.MinecraftCardinalDirection;
 import cn.nukkit.event.block.BlockRedstoneEvent;

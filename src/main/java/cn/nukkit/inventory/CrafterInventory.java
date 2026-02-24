@@ -2,17 +2,16 @@ package cn.nukkit.inventory;
 
 import cn.nukkit.Server;
 import cn.nukkit.block.BlockCrafter;
-import cn.nukkit.blockentity.BlockEntityCrafter;
+import cn.nukkit.block.blockentity.BlockEntityCrafter;
 import cn.nukkit.item.Item;
 import cn.nukkit.network.protocol.types.itemstack.ContainerSlotType;
 import cn.nukkit.recipe.Input;
 import cn.nukkit.recipe.Recipe;
-import cn.nukkit.recipe.ShapedRecipe;
+import cn.nukkit.recipe.type.ShapedRecipe;
 import cn.nukkit.registry.Registries;
 import org.jetbrains.annotations.Range;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;

@@ -1,11 +1,10 @@
 package cn.nukkit.inventory.request;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.inventory.CraftingTableInventory;
 import cn.nukkit.inventory.Inventory;
 import cn.nukkit.inventory.InventoryHolder;
-import cn.nukkit.inventory.SpecialWindowId;
 import cn.nukkit.inventory.fake.FakeInventory;
 import cn.nukkit.item.ItemBundle;
 import cn.nukkit.network.protocol.types.itemstack.ContainerSlotType;

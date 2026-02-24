@@ -1,7 +1,6 @@
 package cn.nukkit.inventory.request;
 
-import cn.nukkit.Player;
-import cn.nukkit.Server;
+import cn.nukkit.player.Player;
 import cn.nukkit.inventory.HumanInventory;
 import cn.nukkit.inventory.SpecialWindowId;
 import cn.nukkit.item.Item;

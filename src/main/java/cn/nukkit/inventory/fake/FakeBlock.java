@@ -1,6 +1,6 @@
 package cn.nukkit.inventory.fake;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.math.Vector3;
 
 import java.util.HashSet;

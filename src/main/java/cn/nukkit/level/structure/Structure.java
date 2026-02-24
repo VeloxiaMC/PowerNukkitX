@@ -2,7 +2,7 @@ package cn.nukkit.level.structure;
 
 import cn.nukkit.block.BlockState;
 import cn.nukkit.block.BlockStructureVoid;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.EntityID;
 import cn.nukkit.level.Level;

@@ -9,9 +9,8 @@ import cn.nukkit.level.format.IChunk;
 import cn.nukkit.level.generator.ChunkGenerateContext;
 import cn.nukkit.level.generator.GenerateFeature;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
-import cn.nukkit.tags.BlockTags;
-import cn.nukkit.utils.random.NukkitRandom;
+import cn.nukkit.nbt.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BlockTags;
 
 import java.util.Set;
 

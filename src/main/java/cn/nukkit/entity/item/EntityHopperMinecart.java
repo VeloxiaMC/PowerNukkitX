@@ -1,11 +1,11 @@
 package cn.nukkit.entity.item;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockActivatorRail;
 import cn.nukkit.block.BlockComposter;
 import cn.nukkit.block.BlockHopper;
-import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntity;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.event.block.HopperSearchItemEvent;
 import cn.nukkit.event.entity.EntityDamageByEntityEvent;

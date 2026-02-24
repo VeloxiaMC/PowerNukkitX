@@ -1,13 +1,12 @@
 package cn.nukkit.network.process.processor;
 
-import cn.nukkit.PlayerHandle;
+import cn.nukkit.player.PlayerHandle;
 import cn.nukkit.level.structure.Structure;
 import cn.nukkit.level.structure.StructureAPI;
 import cn.nukkit.network.process.DataPacketProcessor;
 import cn.nukkit.network.protocol.ProtocolInfo;
 import cn.nukkit.network.protocol.StructureTemplateDataRequestPacket;
 import cn.nukkit.network.protocol.StructureTemplateDataResponsePacket;
-import cn.nukkit.network.protocol.types.StructureTemplateRequestOperation;
 import cn.nukkit.network.protocol.types.StructureTemplateResponseType;
 import org.jetbrains.annotations.NotNull;
 

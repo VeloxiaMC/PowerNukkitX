@@ -1,14 +1,14 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntity;
-import cn.nukkit.blockentity.BlockEntityDispenser;
-import cn.nukkit.blockentity.BlockEntityEjectable;
-import cn.nukkit.dispenser.DispenseBehavior;
-import cn.nukkit.dispenser.DispenseBehaviorRegister;
-import cn.nukkit.dispenser.DropperDispenseBehavior;
-import cn.nukkit.dispenser.FlintAndSteelDispenseBehavior;
+import cn.nukkit.block.blockentity.BlockEntity;
+import cn.nukkit.block.blockentity.BlockEntityDispenser;
+import cn.nukkit.block.blockentity.BlockEntityEjectable;
+import cn.nukkit.block.dispenser.DispenseBehavior;
+import cn.nukkit.block.dispenser.DispenseBehaviorRegister;
+import cn.nukkit.block.dispenser.DropperDispenseBehavior;
+import cn.nukkit.block.dispenser.FlintAndSteelDispenseBehavior;
 import cn.nukkit.inventory.ContainerInventory;
 import cn.nukkit.inventory.Inventory;
 import cn.nukkit.inventory.InventoryHolder;

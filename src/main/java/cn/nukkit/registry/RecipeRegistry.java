@@ -13,6 +13,7 @@ import cn.nukkit.recipe.descriptor.ItemDescriptorType;
 import cn.nukkit.recipe.descriptor.ItemTagDescriptor;
 import cn.nukkit.recipe.special.SmithingArmorTrimCorrectedRecipe;
 import cn.nukkit.recipe.special.DecoratedPotRecipe;
+import cn.nukkit.recipe.type.*;
 import cn.nukkit.utils.Config;
 import cn.nukkit.utils.Identifier;
 import cn.nukkit.utils.MinecraftNamespaceComparator;
@@ -450,6 +451,38 @@ public class RecipeRegistry implements IRegistry<String, Recipe, Recipe> {
         ReferenceCountUtil.safeRelease(buffer);
         buffer = null;
     }
+
+    public boolean unregister(String recipeId) {
+        Recipe recipe = allRecipeMaps.remove(recipeId);
+        if (recipe == null) {
+            return false;
+        }
+
+        Int2ObjectArrayMap<Set<Recipe>> typeMap = recipeMaps.get(recipe.getType());
+        if (typeMap != null) {
+            Set<Recipe> set = typeMap.get(recipe.getIngredients().size());
+            if (set != null) {
+                set.remove(recipe);
+                if (set.isEmpty()) {
+                    typeMap.remove(recipe.getIngredients().size());
+                }
+            }
+            if (typeMap.isEmpty()) {
+                recipeMaps.remove(recipe.getType());
+            }
+        }
+
+        recipeXpMap.removeDouble(recipe);
+        networkIdRecipeList.remove(recipe);
+        RECIPE_COUNT = Math.max(0, RECIPE_COUNT - 1);
+        ReferenceCountUtil.safeRelease(buffer);
+        buffer = null;
+
+        rebuildPacket();
+
+        return true;
+    }
+
 
     public void rebuildPacket() {
         ByteBuf buf = ByteBufAllocator.DEFAULT.ioBuffer(64);

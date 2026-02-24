@@ -10,8 +10,7 @@ import cn.nukkit.level.generator.feature.CountGenerateFeature;
 import cn.nukkit.level.generator.object.BlockManager;
 import cn.nukkit.math.NukkitMath;
 import cn.nukkit.math.Vector3;
-import cn.nukkit.tags.BlockTags;
-import cn.nukkit.utils.random.NukkitRandom;
+import cn.nukkit.nbt.tags.BlockTags;
 import cn.nukkit.utils.random.RandomSourceProvider;
 
 public abstract class GroupedDiscFeature extends CountGenerateFeature {

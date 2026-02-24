@@ -1,6 +1,6 @@
 package cn.nukkit.dialog.window;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.dialog.element.ElementDialogButton;
 import cn.nukkit.dialog.handler.FormDialogHandler;
 import cn.nukkit.entity.Entity;

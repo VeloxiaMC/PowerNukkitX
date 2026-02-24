@@ -1,6 +1,6 @@
 package cn.nukkit.network.process;
 
-import cn.nukkit.PlayerHandle;
+import cn.nukkit.player.PlayerHandle;
 import cn.nukkit.network.process.processor.*;
 import cn.nukkit.network.protocol.DataPacket;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;

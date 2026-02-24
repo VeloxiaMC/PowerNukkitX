@@ -1,6 +1,6 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.block.property.enums.Attachment;
 import cn.nukkit.block.property.enums.WallConnectionType;
 import cn.nukkit.item.Item;

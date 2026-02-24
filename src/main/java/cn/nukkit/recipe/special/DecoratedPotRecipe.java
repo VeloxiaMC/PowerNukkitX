@@ -2,13 +2,11 @@ package cn.nukkit.recipe.special;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.item.Item;
-import cn.nukkit.recipe.MultiRecipe;
+import cn.nukkit.recipe.type.MultiRecipe;
 import cn.nukkit.recipe.descriptor.ItemDescriptor;
 import cn.nukkit.recipe.descriptor.ItemTagDescriptor;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 /**

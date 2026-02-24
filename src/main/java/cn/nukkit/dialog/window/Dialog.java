@@ -1,6 +1,6 @@
 package cn.nukkit.dialog.window;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 
 /**
  * Represents a dialog window that can be sent to a player.

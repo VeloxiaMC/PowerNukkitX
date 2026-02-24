@@ -1,9 +1,7 @@
 package cn.nukkit.network.process.handler;
 
-import cn.nukkit.Player;
-import cn.nukkit.Server;
+import cn.nukkit.player.Player;
 import cn.nukkit.entity.data.property.EntityProperty;
-import cn.nukkit.math.Vector3;
 import cn.nukkit.nbt.tag.CompoundTag;
 import cn.nukkit.network.connection.BedrockSession;
 import cn.nukkit.network.protocol.AvailableEntityIdentifiersPacket;
@@ -13,7 +11,6 @@ import cn.nukkit.network.protocol.SetLocalPlayerAsInitializedPacket;
 import cn.nukkit.network.protocol.StartGamePacket;
 import cn.nukkit.network.protocol.SyncEntityPropertyPacket;
 import cn.nukkit.network.protocol.TrimDataPacket;
-import cn.nukkit.network.protocol.VoxelShapesPacket;
 import cn.nukkit.network.protocol.types.TrimData;
 import cn.nukkit.registry.ItemRegistry;
 import cn.nukkit.registry.ItemRuntimeIdRegistry;
@@ -21,21 +18,13 @@ import cn.nukkit.registry.Registries;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
 @Slf4j
 public class SpawnResponseHandler extends BedrockSessionPacketHandler {
     public SpawnResponseHandler(BedrockSession session) {
         super(session);
         var server = player.getServer();
-
-        log.debug("Sending voxel shapes");
-        VoxelShapesPacket voxelShapesPacket = new VoxelShapesPacket();
-        voxelShapesPacket.setShapes(new ArrayList<>());
-        voxelShapesPacket.setNameMap(new HashMap<>());
-        player.dataPacketImmediately(voxelShapesPacket);
 
         this.startGame();
 
@@ -121,8 +110,8 @@ public class SpawnResponseHandler extends BedrockSessionPacketHandler {
     }
 
     private void startGame() {
-        Server server = player.getServer();
-        StartGamePacket startPk = new StartGamePacket();
+        var server = player.getServer();
+        var startPk = new StartGamePacket();
 
         startPk.entityUniqueId = player.getId();
         startPk.entityRuntimeId = player.getId();
@@ -137,18 +126,15 @@ public class SpawnResponseHandler extends BedrockSessionPacketHandler {
         startPk.dimension = (byte) (player.level.getDimension() & 0xff);
         startPk.worldGamemode = Player.toNetworkGamemode(server.getDefaultGamemode());
         startPk.difficulty = server.getDifficulty();
-
-        Vector3 spawn = player.getSafeSpawn();
+        var spawn = player.getSafeSpawn();
         startPk.spawnX = spawn.getFloorX();
         startPk.spawnY = spawn.getFloorY();
         startPk.spawnZ = spawn.getFloorZ();
-
         startPk.hasAchievementsDisabled = true;
         startPk.dayCycleStopTime = -1;
         startPk.rainLevel = 0;
         startPk.lightningLevel = 0;
         startPk.commandsEnabled = player.isEnableClientCommand();
-        startPk.muteEmoteAnnouncements = server.getSettings().gameplaySettings().muteEmoteAnnouncements();
         startPk.gameRules = player.getLevel().getGameRules();
         startPk.levelId = "";
         startPk.worldName = server.getSubMotd();
@@ -160,7 +146,6 @@ public class SpawnResponseHandler extends BedrockSessionPacketHandler {
         // Write custom block data
         startPk.blockProperties.addAll(Registries.BLOCK.getCustomBlockDefinitionList());
         startPk.playerPropertyData = EntityProperty.getPlayerPropertyCache();
-        startPk.setExperiments(server.getExperiments());
         player.dataPacketImmediately(startPk);
     }
 
@@ -171,7 +156,7 @@ public class SpawnResponseHandler extends BedrockSessionPacketHandler {
 
     @Override
     public void handle(SetLocalPlayerAsInitializedPacket pk) {
-        log.debug("Received SetLocalPlayerAsInitializedPacket for {}", this.player.getPlayerInfo().getUsername());
+        log.debug("receive SetLocalPlayerAsInitializedPacket for {}", this.player.getPlayerInfo().getUsername());
         handle.onPlayerLocallyInitialized();
     }
 }

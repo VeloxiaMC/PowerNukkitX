@@ -1,7 +1,7 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
-import cn.nukkit.PlayerHandle;
+import cn.nukkit.player.Player;
+import cn.nukkit.player.PlayerHandle;
 import cn.nukkit.block.property.enums.CrackedState;
 import cn.nukkit.block.property.enums.TurtleEggCount;
 import cn.nukkit.entity.Entity;

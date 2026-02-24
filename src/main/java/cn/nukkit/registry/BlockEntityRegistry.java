@@ -1,6 +1,6 @@
 package cn.nukkit.registry;
 
-import cn.nukkit.blockentity.*;
+import cn.nukkit.block.blockentity.*;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import lombok.extern.slf4j.Slf4j;

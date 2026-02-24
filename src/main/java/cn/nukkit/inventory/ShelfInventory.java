@@ -1,7 +1,6 @@
 package cn.nukkit.inventory;
 
-import cn.nukkit.blockentity.BlockEntityHopper;
-import cn.nukkit.blockentity.BlockEntityShelf;
+import cn.nukkit.block.blockentity.BlockEntityShelf;
 import cn.nukkit.network.protocol.types.itemstack.ContainerSlotType;
 
 import java.util.Map;

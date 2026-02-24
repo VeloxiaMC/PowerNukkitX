@@ -1,11 +1,11 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemStick;
 import cn.nukkit.level.Level;
 import cn.nukkit.math.BlockFace;
-import cn.nukkit.tags.BlockTags;
+import cn.nukkit.nbt.tags.BlockTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;

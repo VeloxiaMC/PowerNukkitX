@@ -301,7 +301,7 @@ publishing {
             from(components["java"])
             artifactId = "server"
             pom {
-                url.set("https://github.com/PowerNukkitX/PowerNukkitX")
+                url.set("https://github.com/VeloxiaMC/PowerNukkitX")
                 licenses {
                     license {
                         name.set("MIT License")
@@ -309,25 +309,10 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/PowerNukkitX/PowerNukkitX.git")
-                    developerConnection.set("scm:git:ssh://github.com/PowerNukkitX/PowerNukkitX.git")
-                    url.set("https://github.com/PowerNukkitX/PowerNukkitX")
+                    connection.set("scm:git:git://github.com/VeloxiaMC/PowerNukkitX.git")
+                    developerConnection.set("scm:git:ssh://github.com/VeloxiaMC/PowerNukkitX.git")
+                    url.set("https://github.com/VeloxiaMC/PowerNukkitX")
                 }
-            }
-        }
-    }
-
-    repositories {
-        maven {
-            name = "pnx"
-            url = uri("https://repo.powernukkitx.org/releases")
-            credentials {
-                username = providers.gradleProperty("pnxUsername")
-                    .orElse(providers.environmentVariable("PNX_REPO_USERNAME"))
-                    .orNull
-                password = providers.gradleProperty("pnxPassword")
-                    .orElse(providers.environmentVariable("PNX_REPO_PASSWORD"))
-                    .orNull
             }
         }
     }

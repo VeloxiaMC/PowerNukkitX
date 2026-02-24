@@ -1,13 +1,13 @@
 package cn.nukkit.entity.mob;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.Server;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockCreakingHeart;
 import cn.nukkit.block.BlockPaleOakLog;
 import cn.nukkit.block.BlockResinClump;
 import cn.nukkit.block.property.CommonBlockProperties;
-import cn.nukkit.blockentity.BlockEntityCreakingHeart;
+import cn.nukkit.block.blockentity.BlockEntityCreakingHeart;
 import cn.nukkit.entity.EntityIntelligent;
 import cn.nukkit.entity.ai.behavior.Behavior;
 import cn.nukkit.entity.ai.behaviorgroup.BehaviorGroup;

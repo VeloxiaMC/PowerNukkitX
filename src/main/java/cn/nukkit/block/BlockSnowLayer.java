@@ -1,6 +1,6 @@
 package cn.nukkit.block;
 
-import cn.nukkit.Player;
+import cn.nukkit.player.Player;
 import cn.nukkit.entity.EntityLiving;
 import cn.nukkit.event.block.BlockFadeEvent;
 import cn.nukkit.item.Item;
@@ -14,9 +14,8 @@ import cn.nukkit.math.Vector3;
 import cn.nukkit.network.protocol.UpdateBlockPacket;
 import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
 import cn.nukkit.plugin.InternalPlugin;
-import cn.nukkit.registry.BiomeRegistry;
 import cn.nukkit.registry.Registries;
-import cn.nukkit.tags.BiomeTags;
+import cn.nukkit.nbt.tags.BiomeTags;
 import com.google.common.base.Preconditions;
 import org.jetbrains.annotations.NotNull;
 
