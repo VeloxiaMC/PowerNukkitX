@@ -294,29 +294,6 @@ tasks.javadoc {
     isFailOnError = false
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            from(components["java"])
-            artifactId = "server"
-            pom {
-                url.set("https://github.com/VeloxiaMC/PowerNukkitX")
-                licenses {
-                    license {
-                        name.set("MIT License")
-                        url.set("https://opensource.org/licenses/MIT")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:git://github.com/VeloxiaMC/PowerNukkitX.git")
-                    developerConnection.set("scm:git:ssh://github.com/VeloxiaMC/PowerNukkitX.git")
-                    url.set("https://github.com/VeloxiaMC/PowerNukkitX")
-                }
-            }
-        }
-    }
-}
-
 tasks.withType<JavaCompile> {
     options.encoding = ENCODING
 }
